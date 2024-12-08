@@ -1,0 +1,184 @@
+    1  telnet 192.168.1.1 57400
+    2  pico [200~gnmi_cli_verification.sh
+    3  pico gnmi_cli_verification.sh
+    4  chmod +x gnmi_cli_verification.sh
+    5  ./gnmi_cli_verification.sh "<gNMI_path>"
+    6  gnmic -a $DEVICE_IP:$PORT -u $USERNAME -p $PASSWORD get --path "$GNMI_PATH" --format json --timeout 30s
+    7  ping 172.19.19.50
+    8  pico gnmi_cli_verification.sh
+    9  gnmic -a $DEVICE_IP:$PORT -u $USERNAME -p $PASSWORD get --path "$GNMI_PATH" --format json --timeout 30s
+   10  gnmic -a $DEVICE_IP:$PORT -u $ubuntu -p $layan@77 get --path "$GNMI_PATH" --format json --timeout 30s
+   11  gnmic -a $DEVICE_IP:$PORT -u $ubuntu -p layan@77 get --path "$GNMI_PATH" --format json --timeout 30s
+   12  gnmic -a $DEVICE_IP:$PORT -u $ubuntu -p $"layan@77" get --path "$GNMI_PATH" --format json --timeout 30s
+   13  gnmic -a $DEVICE_IP:$PORT -u $ubuntu -p "$layan@77" get --path "$/interfaces/interface[name=eth0]/state/counters" --format json --timeout 30s
+   14  gnmic -a $DEVICE_IP:$PORT -u ubuntu -p layan\@77 get --path "$GNMI_PATH" --format json --timeout 30s
+   15  PASSWORD="layan@77"
+   16  gnmic -a $DEVICE_IP:$PORT -u ubuntu -p "$PASSWORD" get --path "$GNMI_PATH" --format json --timeout 30s
+   17  ip a
+   18  ifconfig
+   19  nmap -sP 192.168.1.0/24
+   20  nmap -sP 10.0.2.0/24
+   21  sudo apt install nmap
+   22  nmap -sP 10.0.2.0/24
+   23  gnmic -a <DEVICE_IP>:57400 -u <USERNAME> -p <PASSWORD> get --path <GNMI_PATH> --format json --timeout 30s
+   24  gnmic -a 10.0.2.15:57400 -u ubuntu -p "layan@77" get --path "/interfaces/interface[name=eth0]/state/counters" --format json --timeout 30s
+   25  ./gnmi_cli_verification.sh "/interfaces/interface[name=eth0]/state/counters"
+   26  [200~echo $DEVICE_IP~
+   27  echo $DEVICE_IP~
+   28  echo $DEVICE_IP
+   29  echo $port
+   30  ip a
+   31  gnmic -a 10.0.2.15:57400 -u <ubuntu> -p "<layan@77>" get --path "</interfaces/interface[name=eth0]/state/counters>" --format json --timeout 30s
+   32  gnmic -a 10.0.2.15:57400 -u ubuntu -p "layan@77" get --path "/interfaces/interface[name=eth0]/state/counters" --format json --timeout 30s
+   33  ping 10.0.2.15
+   34  telnet 10.0.2.15 57400
+   35  sudo apt install nmap
+   36  sudo apt install telnet 
+   37  gnmic -a 10.0.2.15:57400 -u ubuntu -p "layan@77" get --path "/interfaces/interface[name=eth0]/state/counters" --format json --timeout 10s
+   38  nmap -p 57400 10.0.2.15
+   39  sudo ufw status
+   40  ssh ubuntu@10.0.2.15
+   41  sudo systemctl status ssh
+   42  go version
+   43  golang.org/x/crypto/ssh
+   44  nc -zv 172.19.19.50 57400
+   45  nc -zv 172.19.19.50 180
+   46  gnmic -a 172.19.19.50:57400 -u $USERNAME -p $PASSWORD get --path "$GNMI_PATH" --format json --timeout 30s
+   47  gnmic get -a $DEVICE_IP:$PORT -u $USERNAME -p $PASSWORD --path "$GNMI_PATH" --format json --timeout 30s
+   48  gnmic get --help
+   49  gnmic get -a $DEVICE_IP:$PORT -u $USERNAME -p $PASSWORD --path "$GNMI_PATH" --format json --timeout 30s
+   50  gnmic get -a $DEVICE_IP:$PORT -u $USERNAME -p $PASSWORD --path "/interfaces/interface[name=eth0]/state/counters" --format json --timeout 30s
+   51  pico gnmi_cli_verification.sh
+   52  [200~nc -zv 192.168.1.1 57400
+   53  nc -zv 172.19.19.50 57400
+   54  ping 172.19.19.50
+   55  mkdir layanBurit
+   56  cd layan_folder
+   57  [200~cd layanBurit
+   58  cd layanBurit
+   59  nano gnmi.sh
+   60  nano cli.sh
+   61  ls
+   62  nano out.sh
+   63  chmod +x generate_outputs.sh
+   64  chmod +x out.sh
+   65  ./out.sh
+   66  nano compar.sh
+   67  ./compar.sh
+   68  chmod +x compar.sh
+   69  ./compar.sh
+   70  ls out.sh
+   71  ls
+   72  ls outputs
+   73  sudo apt update
+   74  sudo apt install sed -y
+   75  ./compar.sh
+   76  ls
+   77  ls outputs
+   78  ls outputs/cli
+   79  ls outputs/gnmi
+   80  nano compar.sh
+   81  chmod +x compar.sh
+   82  ./compar.sh
+   83  ls outputs/cli/routing_protocols_protocol_ospf__ospf_state_cli.txt
+   84  nano compar.sh
+   85  chmod +x compar.sh
+   86  ./compar.sh
+   87  ls outputs/cli | grep "routing_protocols_protocol_ospf__ospf_state_cli.txt"
+   88  ls outputs/gnmi | grep "routing_protocols_protocol_ospf__ospf_state_gnmi.json"
+   89  cd ~/layanBurit/outputs/cli
+   90  ls
+   91  cd ~/layanBurit/outputs/gnmi
+   92  ls
+   93  nano compar.sh
+   94  chmod +x compar.sh
+   95  ./compar.sh
+   96  nano compar.sh
+   97  chmod +x compar.sh
+   98  ./compar.sh
+   99  nano comp.sh
+  100  chmod +x comp.sh
+  101  ./comp.sh
+  102  ls
+  103  nano cli.sh
+  104  ./cli.sh
+  105  cd ..
+  106  cd..
+  107  cd ..
+  108  nano cli.sh
+  109  chmood +x cli.sh
+  110  chmod +x cli.sh
+  111  ./cli.sh
+  112  nano cli_output_script.sh
+  113  chmod +x cli_output_script.sh
+  114  ./cli_output_script.sh
+  115  nano cli_command_script.sh
+  116  chmod +x cli_command_script.sh
+  117  ./cli_command_script.sh
+  118  nano GNMI_Output.json
+  119  nano Main_Script.sh
+  120  chmod +x Main_Script.sh
+  121  ./Main_Script.sh
+  122  nano GNMI_Script.sh
+  123  chmod +x GNMI_Script.sh
+  124  ./GNMI_Script.sh
+  125  ./Main_Script.sh
+  126  nano GNMI_Script.sh
+  127  chmod +x GNMI_Script.sh
+  128  nano CLI_Command_Script.sh
+  129  chmod +x  CLI_Command_Script.sh
+  130  nano CLI_OUTPUT_Script.sh
+  131  chmod +x CLI_OUTPUT_Script.sh
+  132  nano Compare_Script.sh
+  133  chmod +x  Compare_Script.sh
+  134  nano Main_Script.sh
+  135  chmod +x Main_Script.sh
+  136  ./Main_Script.sh/interfaces/interface[name=eth0]/state/counters
+  137  cd layan_folder
+  138  cd layanBurit
+  139  /home/ubuntu/Downloads/LinuxFirstProject
+  140  cd /home/ubuntu/Downloads/LinuxFirstProject
+  141  ./Main_Script.sh/interfaces/interface[name=eth0]/state/counters
+  142  cd /home/ubuntu/Downloads
+  143  ./Main_Script.sh/interfaces/interface[name=eth0]/state/counters
+  144  ls /home/ubuntu/Downloads/
+  145  ls /home/ubuntu/Downloads/[200~Main_Script.sh
+  146  ls /home/ubuntu/Downloads/Main_Script.sh
+  147  ls /home/ubuntu/Downloads/Main_Script.sh/interfaces/interface[name=eth0]/state/counters
+  148  /home/ubuntu/Downloads/Main_Script.sh/interfaces/interface[name=eth0]/state/counters
+  149  /home/ubuntu/Downloads./Main_Script.sh/interfaces/interface[name=eth0]/state/counters
+  150  ./Main_Script.sh
+  151  ./Main_Script.sh/interfaces/interface[name=eth0]/state/counters
+  152  chmod +x Main_Script.sh
+  153  ./Main_Script.sh /interfaces/interface[name=eth0]/state/counters
+  154  cd /home/ubuntu/Downloads
+  155  sudo ./Main_Script.sh /interfaces/interface[name=eth0]/state/counters
+  156  chmod +x GNMI_Script.sh
+  157  chmod +x CLI_Command_Script.sh
+  158  chmod +x CLI_OUTPUT_Script.sh
+  159  ./Main_Script.sh /interfaces/interface[name=eth0]/state/counters
+  160  ./Main_Script.sh /system/memory/state
+  161  ./Main_Script.sh /interfaces/interface[name=eth0]/state/counters
+  162  ./Main_Script.sh /system/memory/state
+  163  ./Main_Script.sh/interfaces/interface[name=eth1]/state/counters
+  164  ./Main_Script.sh/system/cpu/state/usage
+  165  ./Main_Script.sh/routing/protocols/protocol[ospf]/ospf/state
+  166  ./Main_Script.sh/bgp/neighbors/neighbor[neighbor_address=10.0.0.1]/state
+  167  ./Main_Script.sh/system/cpu/state
+  168  [200~./Main_Script.sh /system/memory/state
+  169  ./Main_Script.sh /system/memory/state
+  170  ./Main_Script.sh /system/cpu/state
+  171  ./Main_Script.sh /bgp/neighbors/neighbor[neighbor_address=10.0.0.1]/state
+  172  ./Main_Script.sh /system/cpu/state
+  173  ./Main_Script.sh /ospf/areas/area[id=0.0.0.0]/state
+  174  ./Main_Script.sh /system/disk/state
+  175  ./Main_Script.sh /interfaces/interface[name=eth0]/state/admin-status
+  176  ./Main_Script.sh /interfaces/interface[name=eth0]/state/speed
+  177  ./Main_Script.sh /system/memory/state/used
+  178  ./Main_Script.sh /system/cpu/state/utilization
+  179  ./Main_Script.sh /system/storage/state/used
+  180  sudo apt update
+  181  sudo apt install git
+  182  git --version
+  183  cd /home/ubuntu/Downloads
+  184  history | tail -n 3000 > t.txt

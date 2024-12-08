@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Input: GNMI Path
+GNMI_PATH=$1
+
+# Check if a path is provided
+if [ -z "$GNMI_PATH" ]; then
+    echo "Usage: $0 <GNMI_PATH>"
+    exit 1
+fi
+
+# Output file
+OUTPUT_FILE="CLI_Output.txt"
+
+# Define a main dictionary to classify paths (single vs multi commands)
+declare -A PATH_TYPE
+
+# Define single-command paths
+declare -A Single_Command
+Single_Command["/interfaces/interface[name=eth0]/state/counters"]="show interfaces eth0 counters"
+Single_Command["/system/memory/state"]="show memory"
+Single_Command["/interfaces/interface[name=eth1]/state/counters"]="show interfaces eth1 counters"
+Single_Command["/system/cpu/state/usage"]="show cpu"
+Single_Command["/routing/protocols/protocol[ospf]/ospf/state"]="show ospf status"
+
+# Define multi-command paths
+declare -A Multi_Commands
+# Define multi-command paths (store commands as a single string separated by semicolons)
+declare -A Multi_Commands
+Multi_Commands["/interfaces/interface[name=eth0]/state"]="show interfaces eth0 status;show interfaces eth0 mac-address;show interfaces eth0 mtu;show interfaces eth0 speed"
+Multi_Commands["/bgp/neighbors/neighbor[neighbor_address=10.0.0.1]/state"]="show bgp neighbors 10.0.0.1;show bgp neighbors 10.0.0.1 received-routes;show bgp neighbors 10.0.0.1 advertised-routes"
+Multi_Commands["/system/cpu/state"]="show cpu usage;show cpu user;show cpu system;show cpu idle"
+Multi_Commands["/ospf/areas/area[id=0.0.0.0]/state"]="show ospf area 0.0.0.0;show ospf neighbors"
+Multi_Commands["/system/disk/state"]="show disk space;show disk health"
+
+
+# Populate PATH_TYPE dictionary: classify paths as single or multi-command
+for path in "${!Single_Command[@]}"; do
+    PATH_TYPE["$path"]="single"
+done
+for path in "${!Multi_Commands[@]}"; do
+    PATH_TYPE["$path"]="multi"
+done
+
+# Check if the provided path exists
+if [[ -v PATH_TYPE["$GNMI_PATH"] ]]; then
+    if [[ "${PATH_TYPE[$GNMI_PATH]}" == "single" ]]; then
+        # Execute single CLI command
+        # CLI_OUTPUT=$("${Single_Command[$GNMI_PATH]}")
+        echo
+        echo "The CLI command for the path '$GNMI_PATH' is :"
+        echo "${Single_Command[$GNMI_PATH]}"
+        echo "${Single_Command[$GNMI_PATH]}" > $OUTPUT_FILE
+        echo "CLI output for path '$GNMI_PATH' saved to $OUTPUT_FILE."
+    elif [[ "${PATH_TYPE[$GNMI_PATH]}" == "multi" ]]; then
+        echo "Executing multiple commands for path '$GNMI_PATH'..."
+        IFS=';' read -ra COMMANDS <<< "${Multi_Commands[$GNMI_PATH]}"
+        i=1
+        # Execute all CLI commands for the path
+        for CMD in "${COMMANDS[@]}"; do
+            echo "Command $i: $CMD"
+            echo "$CMD" >> $OUTPUT_FILE
+            i=$(($i + 1))
+        done
+        echo "CLI outputs for path '$GNMI_PATH' saved to $OUTPUT_FILE."
+    fi
+else
+    # Error message for unknown path
+    echo "Error: Unknown GNMI path. Please provide a valid path."
+    exit 1
+fi
