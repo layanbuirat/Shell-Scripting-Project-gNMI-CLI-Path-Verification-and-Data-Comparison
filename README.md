@@ -158,9 +158,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👤 Author
-**Layan Buriat**
+-Layan Buriat
 - GitHub: [@layanbuirat](https://github.com/layanbuirat).
-**Raghad Murad**
+- Raghad Murad
 - GitHub: [@RaghadMurad](https://github.com/raghad-murad)
 
 ## 🙏 Acknowledgments
