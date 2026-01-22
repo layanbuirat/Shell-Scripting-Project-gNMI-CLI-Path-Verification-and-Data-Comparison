@@ -159,9 +159,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👤 Author
 **Layan Buriat**
-- GitHub: [@layanbuirat](https://github.com/layanbuirat)
+- GitHub: [@layanbuirat](https://github.com/layanbuirat).
 **Raghad Murad**
-   - GitHub: [@RaghadMurad](https://github.com/raghad-murad)
+- GitHub: [@RaghadMurad](https://github.com/raghad-murad)
 
 ## 🙏 Acknowledgments
 - The gNMIc project team for the excellent gNMI client tool
